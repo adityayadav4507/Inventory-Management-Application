@@ -11,7 +11,11 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Inventory Management API")
 @app.get("/")
 def root():
-    return {"message": "Inventory Management API Running"}
+    return {
+        "status": "healthy",
+        "message": "Inventory Management API is live and operational!",
+        "documentation": "/docs"
+        }
 
 app.add_middleware(
     CORSMiddleware,
