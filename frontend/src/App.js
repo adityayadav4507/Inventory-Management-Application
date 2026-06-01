@@ -21,7 +21,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const mRes = await axios.get(`${API_BASE}/dashboard/summary`);
+      const mRes = await axios.get(`${API_BASE}dashboard/summary`);
       setMetrics(mRes.data);
       const pRes = await axios.get(`${API_BASE}/products`);
       setProducts(pRes.data);
