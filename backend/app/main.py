@@ -9,6 +9,9 @@ from . import models, schemas
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Inventory Management API")
+@app.get("/")
+def root():
+    return {"message": "Inventory Management API Running"}
 
 app.add_middleware(
     CORSMiddleware,
