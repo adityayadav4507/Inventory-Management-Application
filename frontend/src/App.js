@@ -116,10 +116,10 @@ function App() {
             
             <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
               <h3 className="text-red-800 font-bold text-lg mb-2 flex items-center">⚠️ Low Stock Alerts (Qty &lt; 5)</h3>
-              <ul className="list-disc pl-5 text-red-700 space-y-1">
+              <ol className="list-disc pl-5 text-red-700 space-y-1">
                 {metrics.low_stock_products.map((p, idx) => <li key={idx} className="font-medium">{p}</li>)}
                 {metrics.low_stock_products.length === 0 && <li>All distribution assets optimally balanced!</li>}
-              </ul>
+              </ol>
             </div>
           </div>
         )}
